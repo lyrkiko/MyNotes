@@ -31,30 +31,35 @@ State 是组件自己拥有并管理的可变数据，调用 setState / useSt
    本质上数据来自服务器，本地只是缓存的副本。这类状态有完全不同的生命周期需求：加载、缓存、过期、重新请求、错误重试。
 
    如果用普通 useState 手动管理：
+   
    ```
-// ❌ 反模式：手动管理 loading/error/data，代码冗余且缓存逻辑缺失
-const [flights, setFlights] = useState([]);
-const [loading, setLoading] = useState(false);
-const [error, setError] = useState(null);
+	// ❌ 反模式：手动管理 loading/error/data，代码冗余且缓存逻辑缺失
+	const [flights, setFlights] = useState([]);
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState(null);
 
-useEffect(() => {
-  setLoading(true);
-  fetchFlights().then(setFlights).catch(setError).finally(() => setLoading(false));
-}, [dep]);
+	useEffect(() => {
+	 setLoading(true);
+	 fetchFlights().then(setFlights).catch(setError).finally(() =>  setLoading(false));
+    }, [dep]);
    ```
+   
    而用 React Query / SWR:
-   ```
-   // ✅ 服务端状态交给专门工具：自动缓存、去重请求、后台刷新、失效重取
-const { data: flights, isLoading, error } = useQuery({
-  queryKey: ['flights', dep, arr, date],
-  queryFn: () => fetchFlights(dep, arr, date),
-  staleTime: 30_000, // 30s 内不重新请求
-});
-   ```
-   把服务端状态塞进 Redux 的代价：
-   * 需要手写大量 loading/error/success action；
-   * 缓存失效逻辑要自己实现；
-   * 多个组件同时请求同一接口时无法自动去重；
-   * 数据变化后手动 invalidate，容易遗漏导致展示旧数据
+   
+```
+ // ✅ 服务端状态交给专门工具：自动缓存、去重请求、后台刷新、失效重取
+   const { data: flights, isLoading, error } = useQuery({
+	  queryKey: ['flights', dep, arr, date],
+	  queryFn: () => fetchFlights(dep, arr, date),
+	  staleTime: 30_000, // 30s 内不重新请求
+	});
+```
+
+    把服务端状态塞进 Redux 的代价：
+	 需要手写大量 loading/error/success action
+	 缓存失效逻辑要自己实现
+	 多个组件同时请求同一接口时无法自动去重
+	 数据变化后手动 invalidate，容易遗漏导致展示旧数据
+
 
 **核心原则：最小化状态的作用域，让每类数据待在最合适的地方。**

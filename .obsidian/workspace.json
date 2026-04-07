@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/React Props vs State 的区别.md",
+                "file": "React/React Props vs State.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React Props vs State 的区别"
+              "title": "React Props vs State"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 223.5
+    "width": 306.5
   },
   "right": {
     "id": "01411970570beb0f",
@@ -169,10 +169,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "91b41f2397c1749c",
+  "active": "a0c4d9256142b961",
   "lastOpenFiles": [
     "React/Class Components vs Functional Components.md",
-    "React/React Props vs State 的区别.md",
+    "React/React Props vs State.md",
     "Project/MCP.md",
     "KeyPoints/NestJS.md",
     "KeyPoints/hydrate.md",
