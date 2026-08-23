@@ -4,24 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "1bf83488e74c3f27",
+        "id": "c05ec64c2fe7a014",
         "type": "tabs",
         "children": [
           {
-            "id": "91b41f2397c1749c",
+            "id": "2dc21a732210d1bf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React/React Props vs State.md",
+                "file": "Work/中间页筛选感知.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React Props vs State"
+              "title": "中间页筛选感知"
+            }
+          },
+          {
+            "id": "e0030304d51aafc0",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.13.7"
+            }
+          },
+          {
+            "id": "e7f4f856df9a54a8",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -41,7 +64,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -78,7 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5
+    "width": 206.5
   },
   "right": {
     "id": "01411970570beb0f",
@@ -169,21 +194,42 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "a0c4d9256142b961",
+  "active": "e7f4f856df9a54a8",
   "lastOpenFiles": [
-    "React/Class Components vs Functional Components.md",
-    "React/React Props vs State.md",
-    "Project/MCP.md",
+    "未命名 1.base",
+    "README.md",
+    "未命名.base",
     "KeyPoints/NestJS.md",
     "KeyPoints/hydrate.md",
+    "KeyPoints/HTTP polling 、SSE.md",
+    "Interview/React Native.md",
+    "Interview/Jump.md",
+    "Interview/Full stack.md",
+    "Interview/Code Review.md",
+    "Interview/AI Chat.md",
     "Interview/accumulator.md",
-    "未命名.base",
+    "Imgs/Pasted image 20260802154915.png",
+    "Work/中间页两舱 tab 卡内升舱.md",
+    "Work/SQL >15d 日志.md",
+    "Work/中间页筛选感知.md",
+    "Work/中间页筛选行李额.md",
+    "AI/Loop Engineer.md",
+    "Imgs",
+    "Project/MCP.md",
+    "AI/Agent 输出形式.md",
+    "Work",
+    "React/React Hook 高频面试题.md",
+    "AI",
+    "React/React Fiber.md",
+    "React/React Diff.md",
+    "未命名 2.base",
+    "未命名.canvas",
+    "React/Class Components vs Functional Components.md",
+    "React/React Props vs State.md",
     "Interview",
-    "未命名.md",
     "未命名 1.md",
     "Project",
     "2025-08-04.md",
-    "未命名.canvas",
     "KeyPoints",
     "React"
   ]
